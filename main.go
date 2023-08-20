@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    "github.com/folkersj/celeritas"
+    "gitea.home/go-laravel/celeritas"
 )
 
 func main() {
