@@ -1,14 +1,16 @@
 package main
 
 import (
-    "fmt"
-    "gitea.home/go-laravel/celeritas"
+    "github.com/folkersj/celeritas"
+    "myapp/handlers"
 )
 
-func main() {
-    result := celeritas.TestFunc(1, 1)
-    fmt.Println(result)
+type application struct {
+    App      *celeritas.Celeritas
+    Handlers *handlers.Handlers
+}
 
-    result = celeritas.TestFunc2(2, 1)
-    fmt.Println(result)
+func main() {
+    c := initApplication()
+    c.App.ListenAndServe()
 }
